@@ -16,15 +16,14 @@
     "electron:serve": "vue-cli-service electron:serve",
     "electron:buildicon": "electron-icon-builder --input=./build/icons/icon.png --output=build --flatten",
     "electron:publish": "vue-cli-service electron:build -mwl -p always",
-    "postinstall": "electron-builder install-app-deps",
-    "postuninstall": "electron-builder install-app-deps",
+    "postinstall": "electron-builder install-app-deps --x64",
     "prettier": "npx prettier --write ./src",
     "netease_api:run": "npx NeteaseCloudMusicApi",
     "install": "npm install --legacy-peer-deps --ignore-scripts"
   },
   "main": "background.js",
   "engines": {
-    "node": "18.x"
+    "node": "22.x"
   },
   "dependencies": {
     "@unblockneteasemusic/rust-napi": "^0.4.0",
@@ -80,7 +79,7 @@
     "x11": "^2.3.0"
   },
   "devDependencies": {
-    "@types/node": "^17.0.0",
+    "@types/node": "^20.11.0",
     "@vue/cli-plugin-babel": "~4.5.15",
     "@vue/cli-plugin-eslint": "~4.5.15",
     "@vue/cli-plugin-pwa": "~4.5.15",
@@ -100,7 +99,8 @@
   },
   "resolutions": {
     "@achrinza/node-ipc": "^11.0.0",
-    "electron-builder": "^24.0.0"
+    "electron-builder": "^24.0.0",
+    "abstract-socket": "^2.1.1"
   },
   "eslintConfig": {
     "root": true,
