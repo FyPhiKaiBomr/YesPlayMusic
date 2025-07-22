@@ -16,7 +16,7 @@
     "electron:serve": "vue-cli-service electron:serve",
     "electron:buildicon": "electron-icon-builder --input=./build/icons/icon.png --output=build --flatten",
     "electron:publish": "vue-cli-service electron:build -mwl -p always",
-    "postinstall": "electron-builder install-app-deps --x64",
+    "postinstall": "electron-builder install-app-deps || echo 'Skipping native module build'",
     "prettier": "npx prettier --write ./src",
     "netease_api:run": "npx NeteaseCloudMusicApi",
     "install": "npm install --legacy-peer-deps --ignore-scripts"
@@ -99,8 +99,7 @@
   },
   "resolutions": {
     "@achrinza/node-ipc": "^11.0.0",
-    "electron-builder": "^24.0.0",
-    "abstract-socket": "^2.1.1"
+    "electron-builder": "^24.0.0"
   },
   "eslintConfig": {
     "root": true,
