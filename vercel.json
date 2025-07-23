@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/api/:match*",
-      "destination": "https://lzsx.dpdns.org/:match*"
+      "destination": "https://netease-cloud-music-api-mu-pearl-72.vercel.app/:match*"
     }
   ]
 }
