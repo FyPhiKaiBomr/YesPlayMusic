@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/api/:match*",
-      "destination": "https://api.lzsx.dpdns.org/:match*"
+      "destination": "https://lzsx.dpdns.org/:match*"
     }
   ]
 }
